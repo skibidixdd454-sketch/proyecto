@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Buscador de Medicamentos</title>
+<style>
+  body { font-family: Arial; text-align: center; background: #e8f5e9; }
+  button { padding: 10px; margin: 5px; border-radius: 10px; border: none; background: #4CAF50; color: white; font-size: 16px; }
+  #caja { background: white; padding: 20px; margin: 20px; border-radius: 15px; display: none; }
+  img { width: 250px; border-radius: 15px; }
+</style>
+</head>
+<body>
+
+<h1>🐄 Buscador de Medicamentos 🐄</h1>
+<p>Elige un medicamento para ver su foto y para qué sirve:</p>
+
+<button onclick="mostrar('lactopar')">Lactopar</button>
+<button onclick="mostrar('ergopar')">Ergopar</button>
+<button onclick="mostrar('cato')">Cato Folic</button>
+<button onclick="mostrar('discural')">Discural</button>
+<button onclick="mostrar('ivert')">Ivert-in</button>
+
+<div id="caja">
+  <h2 id="nombre"></h2>
+  <img id="foto" src="">
+  <p id="info"></p>
+</div>
+
+<script>
+function mostrar(med) {
+  let nombre = document.getElementById("nombre");
+  let foto = document.getElementById("foto");
+  let info = document.getElementById("info");
+  document.getElementById("caja").style.display = "block";
+
+  if(med == 'lactopar'){
+    nombre.innerText = "Lactopar";
+    foto.src = "https://i.imgur.com/ejemplo-lactopar.jpg";
+    info.innerText = "Es como el antibiótico fuerte. Sirve para quitar infecciones graves en el ganado.";
+  }
+  if(med == 'ergopar'){
+    nombre.innerText = "Ergopar";
+    foto.src = "https://i.imgur.com/ejemplo-ergopar.jpg";
+    info.innerText = "Sirve para que le baje la leche a la vaca después del parto.";
+  }
+  if(med == 'cato'){
+    nombre.innerText = "Cato Folic";
+    foto.src = "https://i.imgur.com/ejemplo-cato.jpg";
+    info.innerText = "Es como un Red Bull para animales. Les da energía cuando andan cansados.";
+  }
+  if(med == 'discural'){
+    nombre.innerText = "Discural";
+    foto.src = "https://i.imgur.com/ejemplo-discural.jpg";
+    info.innerText = "Sirve para cortar la diarrea y quitar infecciones del estómago.";
+  }
+  if(med == 'ivert'){
+    nombre.innerText = "Ivert-in 3.5%";
+    foto.src = "https://i.imgur.com/ejemplo-ivert.jpg";
+    info.innerText = "Sirve para matar lombrices y parásitos de adentro, para desparasitar.";
+  }
+}
+</script>
+
+</body>
+</html>
